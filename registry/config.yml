@@ -1,0 +1,28 @@
+version: 0.1
+log:
+  accesslog:
+    disabled: false
+  level: info
+  fields:
+    service: registry
+    environment: development
+storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+  delete:
+    enabled: true
+  cache:
+    blobdescriptor: inmemory
+auth:
+  htpasswd:
+    realm: class-realm
+    path: /etc/docker/registry/htpasswd
+http:
+  addr: 0.0.0.0:5000
+  host:
+  secret: asecretforlocaldevelopment
+  tls:
+    certificate: /etc/docker/registry/certs/registry.crt
+    key: /etc/docker/registry/certs/registry.key
+  debug:
+    addr: 0.0.0.0:5001

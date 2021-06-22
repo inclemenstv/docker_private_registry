@@ -1,0 +1,12 @@
+Docker_registry:
+  REGISTRY_IP: '192.168.20.10'
+  IMAGE_NAME: 'bento/ubuntu-20.04'
+  USER_NAME: 'admin'
+  USER_PASSWORD: 'admin'
+  HOST: 'http:\/\/${REGISTRY_IP}:5000'
+
+VM_SETTINGS:
+  MASTER_MEMORY: '2048'
+  MASTER_CPU: '2'
+  NODE_MEMORY: '2048'
+  NODE_CPU: '2'
